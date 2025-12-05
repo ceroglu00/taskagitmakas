@@ -37,6 +37,11 @@
             pictureBoxBot = new PictureBox();
             label2 = new Label();
             lblBotSeçim = new Label();
+            label3 = new Label();
+            label4 = new Label();
+            lblBotSkor = new Label();
+            lblOyuncuSkor = new Label();
+            btnReset = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -55,11 +60,12 @@
             // 
             lblSonuç.AutoSize = true;
             lblSonuç.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblSonuç.Location = new Point(164, 521);
+            lblSonuç.Location = new Point(268, 312);
             lblSonuç.Name = "lblSonuç";
             lblSonuç.Size = new Size(83, 28);
             lblSonuç.TabIndex = 1;
             lblSonuç.Text = "SONUÇ:";
+            lblSonuç.Visible = false;
             // 
             // pictureBox1
             // 
@@ -132,18 +138,69 @@
             // 
             lblBotSeçim.AutoSize = true;
             lblBotSeçim.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblBotSeçim.Location = new Point(12, 483);
+            lblBotSeçim.Location = new Point(21, 344);
             lblBotSeçim.Name = "lblBotSeçim";
             lblBotSeçim.Size = new Size(135, 28);
             lblBotSeçim.TabIndex = 1;
             lblBotSeçim.Text = "Botun Seçimi: ";
             lblBotSeçim.Visible = false;
             // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 16.2F);
+            label3.Location = new Point(248, 400);
+            label3.Name = "label3";
+            label3.Size = new Size(58, 38);
+            label3.TabIndex = 1;
+            label3.Text = "Bot";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 16.2F);
+            label4.Location = new Point(88, 400);
+            label4.Name = "label4";
+            label4.Size = new Size(113, 38);
+            label4.TabIndex = 1;
+            label4.Text = "Oyuncu";
+            // 
+            // lblBotSkor
+            // 
+            lblBotSkor.AutoSize = true;
+            lblBotSkor.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold);
+            lblBotSkor.Location = new Point(261, 438);
+            lblBotSkor.Name = "lblBotSkor";
+            lblBotSkor.Size = new Size(33, 38);
+            lblBotSkor.TabIndex = 1;
+            lblBotSkor.Text = "0";
+            // 
+            // lblOyuncuSkor
+            // 
+            lblOyuncuSkor.AutoSize = true;
+            lblOyuncuSkor.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold);
+            lblOyuncuSkor.Location = new Point(126, 438);
+            lblOyuncuSkor.Name = "lblOyuncuSkor";
+            lblOyuncuSkor.Size = new Size(33, 38);
+            lblOyuncuSkor.TabIndex = 1;
+            lblOyuncuSkor.Text = "0";
+            // 
+            // btnReset
+            // 
+            btnReset.Location = new Point(157, 537);
+            btnReset.Name = "btnReset";
+            btnReset.Size = new Size(103, 37);
+            btnReset.TabIndex = 6;
+            btnReset.Text = "Reset";
+            btnReset.UseVisualStyleBackColor = true;
+            btnReset.Click += btnReset_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(444, 687);
+            Controls.Add(btnReset);
             Controls.Add(label1);
             Controls.Add(pictureBoxBot);
             Controls.Add(pictureBox3);
@@ -152,6 +209,10 @@
             Controls.Add(richTbxLog);
             Controls.Add(label2);
             Controls.Add(lblSonuç);
+            Controls.Add(lblOyuncuSkor);
+            Controls.Add(lblBotSkor);
+            Controls.Add(label4);
+            Controls.Add(label3);
             Controls.Add(lblBotSeçim);
             Name = "Form1";
             Text = "TAŞ - KAĞIT - MAKAS";
@@ -173,5 +234,10 @@
         private PictureBox pictureBoxBot;
         private Label label2;
         private Label lblBotSeçim;
+        private Label label3;
+        private Label label4;
+        private Label lblBotSkor;
+        private Label lblOyuncuSkor;
+        private Button btnReset;
     }
 }
