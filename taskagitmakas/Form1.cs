@@ -1,4 +1,6 @@
-﻿namespace taskagitmakas
+﻿using System;
+
+namespace taskagitmakas
 {
     public partial class Form1 : Form
     {
@@ -19,6 +21,8 @@
         {
             oyunAktif = true;
             sonuc = oyunClassım.OyunFonksiyonu(oyuncu);
+          
+
             //ŞURADA ANİMASYONUMSU BİŞEYLER
 
             Bitmap[] görseller = {
@@ -38,7 +42,7 @@
             //RASTGELE ŞEKİLDE BOTUN GÖRSELİNİ DEĞİŞTİR
             var index = 0;
 
-            int totalSteps = 50;
+            int totalSteps = 5; //normalde 50 idi
             double maxSpeed = 10;
             double minSpeed = 250;
 
@@ -82,7 +86,7 @@
             richTbxLog.AppendText("ROUND OYNANDI\n");
 
 
-            await Task.Delay(3000);
+            //await Task.Delay(3000);
             oyunAktif = false;
         }
         private void btnTaş_Click(object sender, EventArgs e)
@@ -102,7 +106,6 @@
             OyunOynat();
 
         }
-
 
         void Reset()
         {
